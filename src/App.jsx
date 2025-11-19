@@ -1,71 +1,47 @@
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import HowItWorks from './components/HowItWorks'
+import Calculator from './components/Calculator'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
-
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
+    <div className="min-h-screen bg-white text-slate-900">
+      <Navbar />
+      <main>
+        <Hero />
+        <HowItWorks />
+        <Calculator />
+        {/* Machines teaser */}
+        <section id="machines" className="py-16 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center">Machines for every office size</h2>
+            <p className="mt-3 text-slate-700 text-center max-w-2xl mx-auto">From compact bean-to-cup units to high-output professional brewers. We’ll recommend the perfect fit based on your daily volume and drink preferences.</p>
+            <div className="mt-10 grid md:grid-cols-3 gap-6">
+              {[{
+                name: 'Compact', cups: 'up to 50 cups/day', img: 'https://images.unsplash.com/photo-1502465771179-51f3535da42a?q=80&w=1600&auto=format&fit=crop'
+              },{
+                name: 'Office Pro', cups: '50–200 cups/day', img: 'https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?q=80&w=1600&auto=format&fit=crop'
+              },{
+                name: 'Enterprise', cups: '200+ cups/day', img: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1600&auto=format&fit=crop'
+              }].map((m, i) => (
+                <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={m.img} alt="machine" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-semibold text-lg">{m.name}</h3>
+                    <p className="text-slate-600 text-sm">{m.cups}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
-          </div>
-        </div>
-      </div>
+        </section>
+        <Contact />
+      </main>
+      <Footer />
     </div>
   )
 }
