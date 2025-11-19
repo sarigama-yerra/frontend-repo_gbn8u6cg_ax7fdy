@@ -1,7 +1,11 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Logos from './components/Logos'
+import ValueProps from './components/ValueProps'
 import HowItWorks from './components/HowItWorks'
+import EnterpriseFeatures from './components/EnterpriseFeatures'
 import Calculator from './components/Calculator'
+import CTA from './components/CTA'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -11,7 +15,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Logos />
+        <ValueProps />
         <HowItWorks />
+        <EnterpriseFeatures />
         <Calculator />
         {/* Machines teaser */}
         <section id="machines" className="py-16 md:py-24">
@@ -39,6 +46,7 @@ function App() {
             </div>
           </div>
         </section>
+        <CTA />
         <Contact />
       </main>
       <Footer />

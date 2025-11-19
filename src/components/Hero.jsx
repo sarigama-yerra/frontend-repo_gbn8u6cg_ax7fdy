@@ -1,18 +1,18 @@
 function Hero() {
   return (
-    <section id="home" className="pt-28 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-amber-50 to-white">
+    <section id="home" className="pt-28 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-              Coffee machines for offices, paid by the cup
+              Barista-grade office coffee. Zero CAPEX.
             </h1>
             <p className="mt-4 text-lg text-slate-700">
-              Kaffeland makes great coffee effortless. Rent premium machines with zero upfront cost and pay only for what your team drinks.
+              Kaffeland installs, maintains and supplies premium bean-to-cup machines. You pay by the cup with enterprise-grade controls.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="#calculator" className="inline-flex items-center justify-center rounded-lg bg-amber-600 text-white px-5 py-3 font-medium shadow hover:bg-amber-700 transition">Calculate your monthly cost</a>
-              <a href="#contact" className="inline-flex items-center justify-center rounded-lg border border-slate-300 text-slate-800 px-5 py-3 font-medium hover:bg-slate-50 transition">Get a free demo</a>
+              <a href="#calculator" className="inline-flex items-center justify-center rounded-lg bg-amber-500 text-slate-900 px-5 py-3 font-medium shadow hover:bg-amber-400 transition">Estimate your spend</a>
+              <a href="#contact" className="inline-flex items-center justify-center rounded-lg border border-slate-300 text-slate-800 px-5 py-3 font-medium hover:bg-slate-50 transition">Talk to sales</a>
             </div>
             <div className="mt-6 flex items-center gap-6 text-sm text-slate-600">
               <div className="flex -space-x-2">
@@ -29,7 +29,7 @@ function Hero() {
             </div>
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg ring-1 ring-slate-200 p-4">
               <p className="text-sm font-medium">From $0.20 per cup</p>
-              <p className="text-xs text-slate-500">No lock-in. Maintenance included.</p>
+              <p className="text-xs text-slate-500">SLAs. Maintenance included.</p>
             </div>
           </div>
         </div>
